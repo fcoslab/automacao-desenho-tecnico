@@ -63,6 +63,9 @@ offset = Vector2(-31.365, 13.01)
 zoom = Vector2(0.475, 0.475)
 
 [node name="effects" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.333333)
+show_behind_parent = true
 top_level = true
 material = SubResource("ShaderMaterial_b8e0e")
 position = Vector2(630.5, 257.5)
@@ -71,6 +74,7 @@ texture = ExtResource("2_h5xmb")
 script = ExtResource("3_arfox")
 
 [node name="TextureRect" type="TextureRect" parent="effects"]
+visible = false
 offset_left = -333.0
 offset_top = -212.0
 offset_right = 259.0

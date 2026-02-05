@@ -13,7 +13,7 @@ config_version=5
 config/name="Senaio"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://2jLEsZR7ymVqNvflpdNAfd7j64k.svg"
+config/icon="res://NEW_LOGO.svg"
 
 [display]
 

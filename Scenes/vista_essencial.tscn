@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgtisu7dbvlic"]
+[gd_scene load_steps=9 format=3 uid="uid://dgtisu7dbvlic"]
 
 [ext_resource type="Script" path="res://vista_essencial.gd" id="1_jc8s5"]
 [ext_resource type="Texture2D" uid="uid://6hkcuglpnyke" path="res://images/Tecnologia-scaled.jpg" id="2_lus6r"]
@@ -7,6 +7,12 @@
 [ext_resource type="LabelSettings" uid="uid://cno5duv54ojy6" path="res://fonts/title_label_settings.tres" id="5_7qj4p"]
 [ext_resource type="Script" path="res://Scenes/Button.gd" id="5_nwdkm"]
 [ext_resource type="Texture2D" uid="uid://cy4wp6c25mrfh" path="res://images/Back Button.png" id="7_4gtvv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mxpvf"]
+font_size = 26
+font_color = Color(1, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
 
 [node name="vista essencial" type="Node2D"]
 position = Vector2(337, 534)
@@ -333,6 +339,15 @@ offset_bottom = -246.0
 scale = Vector2(0.275, 0.275)
 icon = ExtResource("7_4gtvv")
 flat = true
+
+[node name="aviso" type="Label" parent="."]
+visible = false
+offset_left = -70.0
+offset_top = 141.0
+offset_right = 218.0
+offset_bottom = 177.0
+text = "Medidas incompatíveis"
+label_settings = SubResource("LabelSettings_mxpvf")
 
 [connection signal="pressed" from="Control/ButtonLimpar" to="." method="_on_button_limpar_pressed"]
 [connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]

@@ -16,7 +16,7 @@ var seno30 = 0.5
 
 @onready var line_edit_c = $Control/LineEditC
 
-
+@onready var aviso = $aviso
 
 @onready var profundidade = 0
 @onready var largura = 0
@@ -95,6 +95,11 @@ func update_calculations():
 
 	$Control/LineEditEscala.text = str(Escala)
 	
+	if resultadoX < 0 or resultadoY <0:
+		aviso.show()
+	else:
+		aviso.hide()
+
 
 	print("Y: ", Y)
 	print("X: ", X)

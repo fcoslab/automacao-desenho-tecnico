@@ -19,6 +19,8 @@ var seno30 = 0.5
 @onready var line_edit_c = $Control/LineEditC
 var can_calculate = false
 
+@onready var aviso = $aviso
+
 
 @onready var profundidade = 0
 @onready var largura = 0
@@ -83,10 +85,7 @@ func update_calculations():
 
 	Escala = $Control/LineEditEscala.text.to_int()
 	altura = $Control/LineEditAlturaPeça.text.to_int()
-	A = $Control/LineEditA
-	B = $Control/LineEditB
-	C = $Control/LineEditC
-	D = $Control/LineEditD
+
 	A = $Control/LineEditA/resultadoA
 	B = $Control/LineEditB/resultadoB
 	C = $Control/LineEditC/resultadoC
@@ -113,8 +112,11 @@ func update_calculations():
 	$Control/LineEditB.text = str(B)
 	$Control/LineEditC.text = str(C)
 	$Control/LineEditD.text = str(D)
-	$Control/LineEditEscala.text = str(Escala) + str(":1")
-	
+
+	if resultadoX < 0 or resultadoY <0:
+		aviso.show()
+	else:
+		aviso.hide()
 
 	print("Y: ", Y)
 	print("X: ", X)

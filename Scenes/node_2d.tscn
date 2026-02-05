@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhvqbsx0taupc"]
+[gd_scene load_steps=8 format=3 uid="uid://bhvqbsx0taupc"]
 
 [ext_resource type="Script" path="res://Node2D.gd" id="1_depwf"]
 [ext_resource type="Texture2D" uid="uid://6hkcuglpnyke" path="res://images/Tecnologia-scaled.jpg" id="2_cpix6"]
@@ -8,6 +8,12 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_u8bab"]
 font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_fcjfn"]
+font_size = 26
+font_color = Color(1, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
 
 [node name="vista isométrica" type="Node2D"]
 position = Vector2(264, 527)
@@ -444,6 +450,15 @@ flat = true
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(60.295, 0)
 zoom = Vector2(0.28, 0.28)
+
+[node name="aviso" type="Label" parent="."]
+visible = false
+offset_left = -70.0
+offset_top = 141.0
+offset_right = 218.0
+offset_bottom = 177.0
+text = "Medidas incompatíveis"
+label_settings = SubResource("LabelSettings_fcjfn")
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/ButtonLimpar" to="." method="_on_button_limpar_pressed"]
